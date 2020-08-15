@@ -1,16 +1,20 @@
-<h2>Today's article</h2>
-<hr><br><br>
-<div *ngFor="let art of articles">
-  <a href="{{art.url}}" target="_blank">{{art.title}}</a>
-  <app-likes></app-likes>
-</div>
-<hr><br><br>
-<!-- <textarea [value]="article.title" cols="70" id="article-title"></textarea> -->
-<textarea [(ngModel)]="article.title" cols="70"></textarea>
-<!-- <textarea [value]="article.url" cols="70" id="article-url"></textarea> -->
-<textarea [(ngModel)]="article.url" cols="70"></textarea>
-<button class="btn btn-primary" (click)="addArticle()">Add</button>
 
-<!-- <input (click)="updateArticle()" type="button" value="Update"> -->
-<hr>
-@CodeGym, 2019
+<div class="container">
+  <app-header></app-header>
+  <h2>Today's article</h2>
+  <hr>
+  <div *ngFor="let art of articles">
+    <a href="{{art.url}}" target="_blank">{{art.title}}</a>
+    <app-likes></app-likes>
+  </div>
+  <hr>
+  <!-- <textarea [value]="article.title" cols="70" id="article-title"></textarea> -->
+  <textarea [(ngModel)]="article.title" cols="70"></textarea>
+  <!-- <textarea [value]="article.url" cols="70" id="article-url"></textarea> -->
+  <textarea [(ngModel)]="article.url" cols="70"></textarea>
+  <button class="btn btn-primary" (click)="addArticle()">Add</button>
+
+  <!-- <input (click)="updateArticle()" type="button" value="Update"> -->
+  <hr>
+  <app-footer></app-footer>
+</div>
